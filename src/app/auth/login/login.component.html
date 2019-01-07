@@ -1,0 +1,22 @@
+
+<form [formGroup]="form.getForm()" (ngSubmit)="login()">
+<ion-list>
+  <div class='red' *ngIf="error"> {{error}}</div>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text" formControlName="email"></ion-input>
+    <div class='red' *ngIf="form.getError('email')"> {{form.getError('email')}}</div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+    <div class='red' *ngIf="form.getError('password')"> {{form.getError('password')}}</div>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <ion-button block color="primary" type="submit">Login</ion-button>
+</div>
+</form>

@@ -1,5 +1,7 @@
 {
   "name": "ligjerata",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
